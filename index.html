@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Heuristics Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Usability Heuristics Playground</h1>
+        <p>A testing playground for learning Nielsen's 10 Usability Heuristics</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="active-section">
+            <h2>Welcome to the Usability Testing Playground</h2>
+            <p>This website contains intentional usability issues related to Nielsen's 10 Usability Heuristics. 
+               Can you identify all the problems?</p>
+            
+            <!-- Heuristic 1: Visibility of System Status -->
+            <div class="heuristic-demo" id="heuristic1">
+                <h3>Form Submission Demo</h3>
+                <p>Try submitting this form:</p>
+                <form id="demoForm">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Submit</button>
+                    <!-- Issue: No loading indicator or confirmation after submission -->
+                </form>
+            </div>
+
+            <!-- Heuristic 2: Match Between System and Real World -->
+            <div class="heuristic-demo" id="heuristic2">
+                <h3>Technical Jargon Section</h3>
+                <p>Please configure your TCP/IP settings to enable the DOM traversal for optimal CSS rendering. 
+                   Ensure your viewport meta-tags are properly configured for responsive breakpoints.</p>
+                <!-- Issue: Uses technical jargon instead of plain language -->
+                <div class="controls">
+                    <button id="techButton1">Execute Function</button>
+                    <button id="techButton2">Implement Protocol</button>
+                </div>
+            </div>
+
+            <!-- Heuristic 3: User Control and Freedom -->
+            <div class="heuristic-demo" id="heuristic3">
+                <h3>Modal Dialog Demo</h3>
+                <button id="showModalBtn">Show Important Message</button>
+                <div id="modalOverlay" class="hidden">
+                    <div id="modalContent">
+                        <h4>Subscribe to our Newsletter!</h4>
+                        <p>Enter your email to receive updates:</p>
+                        <input type="email" placeholder="Your email">
+                        <button id="subscribeBtn">Subscribe Now</button>
+                        <!-- Issue: No close button or escape mechanism -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heuristic 4: Consistency and Standards -->
+            <div class="heuristic-demo" id="heuristic4">
+                <h3>Navigation Patterns</h3>
+                <div class="inconsistent-ui">
+                    <div class="panel">
+                        <h4>Panel 1</h4>
+                        <button class="action-btn">Save</button>
+                    </div>
+                    <div class="panel">
+                        <h4>Panel 2</h4>
+                        <button class="submit-button">Store</button>
+                    </div>
+                    <div class="panel">
+                        <h4>Panel 3</h4>
+                        <div class="btn">Commit</div>
+                    </div>
+                </div>
+                <!-- Issue: Inconsistent button styles and labels for the same action -->
+            </div>
+
+            <!-- Heuristic 5: Error Prevention -->
+            <div class="heuristic-demo" id="heuristic5">
+                <h3>Delete Account</h3>
+                <p>To delete your account, click the button below:</p>
+                <button id="deleteAccountBtn">Delete Account</button>
+                <!-- Issue: No confirmation step before destructive action -->
+            </div>
+        </section>
+
+        <section id="about" class="hidden-section">
+            <!-- Heuristic 6: Recognition Rather than Recall -->
+            <h2>About Our Company</h2>
+            <p>Please navigate to the following sections using the codes below:</p>
+            <ul>
+                <li>For company history: Use code H-1234</li>
+                <li>For team members: Use code T-5678</li>
+                <li>For mission statement: Use code M-9012</li>
+            </ul>
+            <input type="text" id="sectionCodeInput" placeholder="Enter section code">
+            <button id="goToSectionBtn">Go</button>
+            <!-- Issue: Forces users to remember codes instead of showing options -->
+
+            <!-- Heuristic 7: Flexibility and Efficiency of Use -->
+            <div class="heuristic-demo" id="heuristic7">
+                <h3>Image Gallery</h3>
+                <div class="gallery">
+                    <img src="https://via.placeholder.com/150" alt="Image 1">
+                    <img src="https://via.placeholder.com/150" alt="Image 2">
+                    <img src="https://via.placeholder.com/150" alt="Image 3">
+                    <img src="https://via.placeholder.com/150" alt="Image 4">
+                    <img src="https://via.placeholder.com/150" alt="Image 5">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prevImage">Previous</button>
+                    <button id="nextImage">Next</button>
+                    <!-- Issue: No keyboard shortcuts or efficient navigation for power users -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="hidden-section">
+            <!-- Heuristic 8: Aesthetic and Minimalist Design -->
+            <h2>Contact Us</h2>
+            <div class="cluttered-design">
+                <div class="ad-banner">SPECIAL OFFER! 50% OFF TODAY ONLY!</div>
+                <div class="social-icons">
+                    <span>Follow us:</span>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Snapchat</a>
+                </div>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <textarea placeholder="Your message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="newsletter-signup">
+                    <h3>Sign up for our newsletter!</h3>
+                    <input type="email" placeholder="Your email">
+                    <button>Subscribe</button>
+                </div>
+                <div class="recent-posts">
+                    <h3>Recent Blog Posts</h3>
+                    <ul>
+                        <li><a href="#">10 Tips for Better UX Design</a></li>
+                        <li><a href="#">Why User Testing Matters</a></li>
+                        <li><a href="#">The Future of Web Design</a></li>
+                    </ul>
+                </div>
+                <!-- Issue: Cluttered design with too much information and distractions -->
+            </div>
+        </section>
+
+        <section id="products" class="hidden-section">
+            <!-- Heuristic 9: Help Users Recognize, Diagnose, and Recover from Errors -->
+            <h2>Our Products</h2>
+            <div class="heuristic-demo" id="heuristic9">
+                <h3>Product Search</h3>
+                <form id="productSearchForm">
+                    <input type="text" id="productSearchInput" placeholder="Search products">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="searchError" class="error-message hidden">
+                    Error 404: Query failed. Please try again.
+                    <!-- Issue: Unhelpful error message that doesn't explain the problem or how to fix it -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="hidden-section">
+            <!-- Heuristic 10: Help and Documentation -->
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>We create responsive websites tailored to your needs.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="service-item">
+                    <h3>UX Design</h3>
+                    <p>We design intuitive user experiences for your products.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="service-item">
+                    <h3>Mobile Apps</h3>
+                    <p>We develop cross-platform mobile applications.</p>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <!-- Issue: No help documentation or guidance for using the services -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Usability Heuristics Playground. All rights reserved.</p>
+    </footer>
+</body>
+</html>
